@@ -27,8 +27,12 @@ def shielder():
 @route('/maze/www/maze.html')
 def maze():
     return template('maze/www/maze.html')
-#static files  fyrir index  síðuna
+#static files  fyrir index  síðuna og defence, hef reynt  að gera það sama fyrir öll js files á  seinni leiknum
+#en þar sem  hann nær ekki í öll gögnin sín í einu þá lenti ég líka í vandamálum þar
 @route('/static/<filename>')
 def server_static(filename):
     return static_file(filename, root='./static')
+@route('/defence/js/<filename>')
+def server_static(filename):
+    return static_file(filename, root='./defence/js')
 run()
