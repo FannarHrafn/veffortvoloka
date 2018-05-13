@@ -21,9 +21,7 @@ def shielder():
 @route('/maze/www/maze.html')
 def maze():
     return template('maze/www/maze.html')
-'''
 @route('/static/<filename>')
 def server_static(filename):
     return static_file(filename, root='./static')
-'''
 run()
