@@ -2,7 +2,7 @@
 #lokaverkefni vor 2018
 from bottle import template,route,run,static_file
 import json
-with open("static/gogn.json","r") as skra:
+with open("json/gogn.json","r") as skra:
     gogn = json.load(skra)
 skra.close()
 innerhtml="<div>\n"
